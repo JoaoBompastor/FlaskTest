@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <script type= 'text/javascript' src="{{ url_for('static', filename= 'script.js')}}"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <div>
+        {% block content %}
+        <div class="textos">
+            <h1>Home</h1>
+            <p>
+                Olá, {{name}}! é um prazer te ter por aqui!
+            </p>
+        </div>
+
+        <button class="goto-profile" onclick="window.location.href='http://127.0.0.1:8000/view/profile/';">
+            profile page!
+        </button>
+        {% endblock %}
+    </div>
+</body>
+</html>
